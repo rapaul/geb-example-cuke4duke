@@ -23,7 +23,7 @@
     </repository>
     <repository>
       <id>codehaus-snaps</id>
-      <url>http://snapshots.repository.codehaus.org</url>
+      <url>https://nexus.codehaus.org/content/repositories/snapshots/</url>
     </repository>
     <repository>
       <id>cukes</id>
@@ -64,7 +64,7 @@
     <dependency>
       <groupId>org.codehaus.geb</groupId>
       <artifactId>geb-core</artifactId>
-      <version>0.5-SNAPSHOT</version>
+      <version>0.6-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
