@@ -3,8 +3,7 @@ Feature: Search
   As an information seeker
   I want to find more information
 
-  Scenario: Find what I'm looking for
-    Given I am on the Google search page
-    When I search for "cucumber github"
-    Then I am at the results page
-    And The first link should be "cucumber - GitHub"
+  Scenario: I'm feeling lucky
+    Given I am on the Wikipedia homepage
+    When I search for "dog"
+    Then I am shown the "Dog" article
