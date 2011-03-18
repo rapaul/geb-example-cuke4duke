@@ -2,11 +2,14 @@ import geb.Browser
 
 this.metaClass.mixin(cuke4duke.GroovyDsl)
 
-Before {
-    browser = new Browser('http://wikipedia.org')
-}
-
 After {
-    browser.clearCookies()
+  browser.clearCookies()
 }
 
+World {
+  new Bling()
+}
+
+class Bling {
+  @Delegate Browser browser = new Browser('http://wikipedia.org')
+}

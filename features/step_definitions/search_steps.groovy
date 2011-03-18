@@ -1,14 +1,18 @@
 this.metaClass.mixin(cuke4duke.GroovyDsl)
 
 Given(~'I am on the Wikipedia homepage') {
-  browser.go()
+  go()
 }
 
 When(~'I search for "(.+)"') { query ->
-  browser.find('#searchInput').value(query)
-  browser.find('.searchButton').click()
+  $('#searchInput').value(query)
+  $('.searchButton').click()
 }
 
 Then(~'I am shown the "(.+)" article') { article ->
-  assert browser.find('h1').text() == article
+  assert $('h1').text() == article
+}
+
+Then(~'I am shown "(.+)"') { text ->
+  assert $('li', text:text)
 }
